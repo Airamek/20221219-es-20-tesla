@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesla</title>
+    <style>
+      .wrapper {
+        display: flex;
+        justify-content: center;
+      }
+    
+      .cars {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .cars .carimg-cont {
+        width: 100%;
+      }
+    
+      .cars button {
+        margin-top: 20px;
+      }
+      
+      img {
+        height: 500px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+    </style>
+</head>
+<body>
+  <h1>Tesla M3</h1>
+      
+      <div class="wrapper">
+        <div class="cars">
+          <div class="carimg-cont"><img src="img/m3white.jpg" id="car-image"></div>
+          <div class="gombok">
+            <button onclick="kepValt('red')">Red</button>
+            <button onclick="kepValt('blue')">Blue</button>
+            <button onclick="kepValt('white')">White</button>
+          </div>
+          
+        </div>
+      </div>
+      
+      <script>
+        function kepValt(color) {
+          // Update the src attribute of the image to the corresponding color image
+          document.getElementById('car-image').src = `img/m3${color}.jpg`;
+        }
+      </script>
+      
+</body>
+</html>
